@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Quad sets",
+    "image": "https://www.whyiexercise.com/images/xKnee.exercises.quad.sets.jpg.pagespeed.ic.L9sSDNKkVc.jpg",
+    "instructions": "Place a pillow lengthwise under your knee. Pull your toes back and push your leg down to squash the pillow. This exercise can be done lying flat as shown, sitting in a chair, or leaning against a wall.",
+    "extra": "You should feel your thigh and gluteus muscles during this exercise.",
+    "reps": {
+      "count": 10,
+      "hold": 10
+    }
+  },
+  {
+    "name": "Hamstring sets",
+    "image": "https://www.whyiexercise.com/images/xKnee.exercises.hamstring.sets.jpg.pagespeed.ic.-eXn4eAziE.jpg",
+    "instructions": "Lie on your back with knees bent and toes up. Dig your heels into the ground and pull back without sliding your heels. As with quad sets, start with a moderate effort and increase your effort gradually.",
+    "extra": "You should feel the back of your thigh, the hamstrings, during this exercise.",
+    "reps": {
+      "count": 10,
+      "hold": 10
+    }
+  },
+  {
+    "name": "Straight leg raise",
+    "image": "https://www.whyiexercise.com/images/xKnee.exercises.straight.leg.raise.jpg.pagespeed.ic.lES5Mmal3H.jpg",
+    "instructions": "Tighten your thigh and pull your toes back just as you do for the quad set, then maintain the muscle tightness as you slowly raise your leg inline with your other thigh. Lower slowly and relax your muscles briefly at the bottom.",
+    "extra": "Lower slowly and relax your muscles briefly at the bottom.",
+    "reps": {
+      "count": 10,
+      "hold": 1
+    }
+  },
+  {
+    "name": "Bridging",
+    "image": "https://www.whyiexercise.com/images/Knee.exercises.bridging.jpg",
+    "instructions": "Knees bent and feet flat on the floor with your heels spaced comfortably from your bottom. Fold a bed pillow in half, and place it between your knees. Squeeze the pillow and hold on to it tightly. Raise your bottom upward slowly lifting your lower back from the floor. Continue lifting your bottom upward until there is a straight line from your shoulders to your knees.",
+    "extra": "Squeeze the pillow and hold on to it tightly.",
+    "reps": {
+      "count": 7,
+      "hold": 7
+    }
+  },
+  {
+    "name": "Knee extension",
+    "image": "https://www.whyiexercise.com/images/Knee.exercises.knee.extension.jpg",
+    "instructions": "Sit upright in a chair, straighten your leg, tighten your thigh and pull your toes back.",
+    "extra": "You may feel a stretch behind your knee during the exercise.",
+    "reps": {
+      "count": 10,
+      "hold": 10
+    }
+  },
+  {
+    "name": "Heel raises",
+    "image": "https://www.whyiexercise.com/images/Knee.exercises.heel.raises.jpg",
+    "instructions": "Hold onto a chair or counter-top only as much as you need to for safety. Go up on your toes as high as possible without leaning forward.",
+    "extra": "Keep your weight over your big toes as you go up and down.",
+    "reps": {
+      "count": 10,
+      "hold": 3
+    }
+  },
+  {
+    "name": "Butt Kicks",
+    "image": "https://www.whyiexercise.com/images/Knee.exercises.butt.kicks.jpg",
+    "instructions": "Keep your knees in line and lift your heel toward your rear end, as high as possible. Stand upright when you lift your heel.",
+    "extra": "You will feel your hamstring muscles during this exercise, and you may feel a stretch in the front of your thigh.",
+    "reps": {
+      "count": 10,
+      "hold": 1
+    }
+  }
+]

@@ -1,31 +1,20 @@
-# knee-physio
+# nhs-knee-physio
 
-https://www.whyiexercise.com/knee-exercises.html
+## Build Setup
 
-## Project setup
+```bash
+# install dependencies
+$ npm install
 
-```
-npm install
-```
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-### Compiles and hot-reloads for development
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
+# generate static project
+$ npm run generate
 ```
 
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
