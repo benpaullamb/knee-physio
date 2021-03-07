@@ -15,6 +15,8 @@
         {{ instructions }}
       </div>
     </details>
+
+    <Timer v-if="showTimer" :reps="timerReps" :holdTime="timerHold" />
   </div>
 </template>
 
@@ -40,6 +42,18 @@ export default {
     instructions: {
       type: String,
       required: true,
+    },
+    showTimer: {
+      type: Boolean,
+      default: false,
+    },
+    timerReps: {
+      type: Number,
+      default: 10,
+    },
+    timerHold: {
+      type: Number,
+      default: 10,
     },
   },
 };

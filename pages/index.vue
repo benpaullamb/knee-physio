@@ -7,15 +7,23 @@
 
       <ContentsList :items="exerciseSections" />
 
-      <Exercise
-        v-for="(exercise, i) in exercises"
-        :key="exercise.name"
-        :title="`${i + 1}. ${exercise.name}`"
-        :image="exercise.image"
-        :imageAlt="exercise.name"
-        :caption="exercise.extra"
-        :instructions="exercise.instructions"
-      />
+      <div v-for="(exercise, i) in exercises" :key="exercise.name">
+        <Exercise
+          :title="`${i + 1}. ${exercise.name}`"
+          :image="exercise.image"
+          :imageAlt="exercise.name"
+          :caption="exercise.extra"
+          :instructions="exercise.instructions"
+          :showTimer="exercise.reps.hold > 1"
+          :timerReps="exercise.reps.count"
+          :timerHold="exercise.reps.hold"
+        />
+
+        <hr
+          v-if="i !== exercises.length - 1"
+          class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible"
+        />
+      </div>
     </Content>
 
     <Footer />
