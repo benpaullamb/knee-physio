@@ -22,8 +22,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico' }],
-    script: [{ src: 'node_modules/nhsuk-frontend/dist/nhsuk.min.js', defer: true }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/knee-physio/favicons/favicon.ico' }],
+    script: [{ src: '/nhsuk.min.js', defer: true }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

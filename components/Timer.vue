@@ -35,6 +35,10 @@ export default {
       type: Number,
       required: true,
     },
+    restTime: {
+      type: Number,
+      default: 5,
+    },
   },
 
   data() {
@@ -45,7 +49,6 @@ export default {
       nextInstructionText: '',
       nextInstructionSpeech: '',
       prepTime: 20,
-      restTime: 5,
       voicePitch: 1.5,
       timer: null,
       finishedTimer: null,

@@ -7,16 +7,22 @@
 
       <ContentsList :items="exerciseSections" />
 
+      <p class="nhsuk-body nhsuk-u-margin-bottom-8">
+        Each exercise listed below includes a timer to help you keep track of the amount of time you have to hold the
+        positions for, as well as the number of repetitions. If an exercise does not include a timer, you do not have to
+        hold any position during that exercise.
+      </p>
+
       <div v-for="(exercise, i) in exercises" :key="exercise.name">
         <Exercise
           :title="`${i + 1}. ${exercise.name}`"
-          :image="exercise.image"
-          :imageAlt="exercise.name"
-          :caption="exercise.extra"
+          :image="{
+            url: exercise.image,
+            alt: exercise.name,
+            caption: exercise.extra,
+          }"
           :instructions="exercise.instructions"
-          :showTimer="exercise.reps.hold > 1"
-          :timerReps="exercise.reps.count"
-          :timerHold="exercise.reps.hold"
+          :reps="exercise.reps"
         />
 
         <hr

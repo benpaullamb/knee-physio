@@ -56,7 +56,8 @@
     "extra": "Keep your weight over your big toes as you go up and down.",
     "reps": {
       "count": 10,
-      "hold": 3
+      "hold": 3,
+      "rest": 3
     }
   },
   {

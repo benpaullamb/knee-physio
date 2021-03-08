@@ -3,8 +3,8 @@
     <h2 class="nhsuk-heading-l" :id="title.split('. ')[1].toLowerCase().replace(/\s/gi, '-')">{{ title }}</h2>
 
     <figure class="nhsuk-image">
-      <img class="nhsuk-image__img" :src="image" :alt="imageAlt" />
-      <figcaption class="nhsuk-image__caption">{{ caption }}</figcaption>
+      <img class="nhsuk-image__img" :src="image.url" :alt="image.alt" />
+      <figcaption class="nhsuk-image__caption">{{ image.caption }}</figcaption>
     </figure>
 
     <details class="nhsuk-details">
@@ -16,7 +16,7 @@
       </div>
     </details>
 
-    <Timer v-if="showTimer" :reps="timerReps" :holdTime="timerHold" />
+    <Timer v-if="reps.hold > 1" :reps="reps.count" :holdTime="reps.hold" :restTime="reps.rest" />
   </div>
 </template>
 
@@ -28,32 +28,16 @@ export default {
       required: true,
     },
     image: {
-      type: String,
-      required: true,
-    },
-    imageAlt: {
-      type: String,
-      required: true,
-    },
-    caption: {
-      type: String,
+      type: Object,
       required: true,
     },
     instructions: {
       type: String,
       required: true,
     },
-    showTimer: {
-      type: Boolean,
-      default: false,
-    },
-    timerReps: {
-      type: Number,
-      default: 10,
-    },
-    timerHold: {
-      type: Number,
-      default: 10,
+    reps: {
+      type: Object,
+      required: true,
     },
   },
 };
