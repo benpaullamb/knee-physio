@@ -16,7 +16,13 @@
       </div>
     </details>
 
-    <Timer v-if="reps.hold > 1" :initialReps="reps.count" :initialHold="reps.hold" :initialRest="reps.rest" />
+    <Timer
+      v-if="reps.hold > 1"
+      :initialReps="reps.count"
+      :initialHold="reps.hold"
+      :initialRest="reps.rest"
+      :exercise="title"
+    />
   </div>
 </template>
 

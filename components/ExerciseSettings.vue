@@ -41,6 +41,10 @@ export default {
       type: Number,
       default: 5,
     },
+    exercise: {
+      type: String,
+      required: true,
+    },
   },
 
   data() {
@@ -76,7 +80,7 @@ export default {
         rest: Number(this.rest),
       };
 
-      window.localStorage.setItem('settings', JSON.stringify(settings));
+      window.localStorage.setItem(`settings/${this.exercise}`, JSON.stringify(settings));
 
       this.$emit('onSettingsChange', settings);
 

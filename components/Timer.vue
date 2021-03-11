@@ -33,6 +33,7 @@
         :initialReps="reps"
         :initialHold="hold"
         :initialRest="rest"
+        :exercise="exercise"
       />
     </div>
   </details>
@@ -54,6 +55,10 @@ export default {
     initialRest: {
       type: Number,
       default: 5,
+    },
+    exercise: {
+      type: String,
+      required: true,
     },
   },
 
@@ -99,7 +104,7 @@ export default {
   },
 
   mounted() {
-    let settings = window.localStorage.getItem('settings');
+    let settings = window.localStorage.getItem(`settings/${this.exercise}`);
     if (settings) {
       const { reps, hold, rest } = JSON.parse(settings);
       this.reps = reps;
