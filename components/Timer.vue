@@ -20,40 +20,67 @@
       <button @click="startTimer" :disabled="timer" class="nhsuk-button">Start</button>
       <button @click="pauseTimer" class="nhsuk-button nhsuk-button--secondary">Pause</button>
       <button @click="resetTimer" class="nhsuk-button nhsuk-button--secondary">Reset</button>
+
+      <a
+        @click="isSettingsOpen = !isSettingsOpen"
+        class="timer__settings nhsuk-link nhsuk-link--no-visited-state nhsuk-u-margin-bottom-3"
+        >{{ isSettingsOpen ? 'Close settings' : 'Change this exercises settings' }}</a
+      >
+
+      <ExerciseSettings
+        v-if="isSettingsOpen"
+        @onSettingsChange="onSettingsChange"
+        :initialReps="reps"
+        :initialHold="hold"
+        :initialRest="rest"
+      />
     </div>
   </details>
 </template>
 
 <script>
+import ExerciseSettings from './ExerciseSettings.vue';
+
 export default {
   props: {
-    reps: {
+    initialReps: {
       type: Number,
       required: true,
     },
-    holdTime: {
+    initialHold: {
       type: Number,
       required: true,
     },
-    restTime: {
+    initialRest: {
       type: Number,
       default: 5,
     },
   },
 
+  components: {
+    ExerciseSettings,
+  },
+
   data() {
     return {
-      time: 0,
+      reps: 0,
+      hold: 0,
+      rest: 0,
+
+      isSettingsOpen: false,
+
       defaultInstruction:
         'When you start the timer the next instruction will be displayed here as well as being spoken to you.',
       nextInstructionText: '',
       nextInstructionSpeech: '',
-      prepTime: 20,
       voicePitch: 1.5,
-      timer: null,
-      finishedTimer: null,
+
+      time: 0,
+      prepTime: 20,
       nextEventTime: 0,
       eventType: 'hold',
+      timer: null,
+      finishedTimer: null,
     };
   },
 
@@ -67,8 +94,22 @@ export default {
     },
 
     totalDuration() {
-      return this.prepTime + this.reps * this.holdTime + (this.reps - 1) * this.restTime;
+      return this.prepTime + this.reps * this.hold + (this.reps - 1) * this.rest;
     },
+  },
+
+  mounted() {
+    let settings = window.localStorage.getItem('settings');
+    if (settings) {
+      const { reps, hold, rest } = JSON.parse(settings);
+      this.reps = reps;
+      this.hold = hold;
+      this.rest = rest;
+    } else {
+      this.reps = this.initialReps;
+      this.hold = this.initialHold;
+      this.rest = this.initialRest;
+    }
   },
 
   methods: {
@@ -141,12 +182,12 @@ export default {
           this.setNextInstruction(`You have ${this.prepTime} seconds to get into position.`);
           break;
         case 'hold':
-          this.nextEventTime += this.holdTime;
+          this.nextEventTime += this.hold;
           this.setNextInstruction('Perform the exercise.', 'Go');
           break;
         case 'rest':
-          this.nextEventTime += this.restTime;
-          this.setNextInstruction(`Rest for ${this.restTime} seconds.`, 'Rest');
+          this.nextEventTime += this.rest;
+          this.setNextInstruction(`Rest for ${this.rest} seconds.`, 'Rest');
           break;
       }
 
@@ -162,6 +203,12 @@ export default {
       const utterance = new SpeechSynthesisUtterance(this.nextInstructionSpeech);
       utterance.pitch = this.voicePitch;
       speechSynthesis.speak(utterance);
+    },
+
+    onSettingsChange({ reps, hold, rest }) {
+      this.reps = reps;
+      this.hold = hold;
+      this.rest = rest;
     },
   },
 };
@@ -190,5 +237,13 @@ export default {
 
 .timer__left {
   background: $color_nhsuk-grey-3;
+}
+
+.timer__settings {
+  display: block;
+}
+
+.timer__settings:hover {
+  cursor: pointer;
 }
 </style>

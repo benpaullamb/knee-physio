@@ -16,7 +16,7 @@
       </div>
     </details>
 
-    <Timer v-if="reps.hold > 1" :reps="reps.count" :holdTime="reps.hold" :restTime="reps.rest" />
+    <Timer v-if="reps.hold > 1" :initialReps="reps.count" :initialHold="reps.hold" :initialRest="reps.rest" />
   </div>
 </template>
 
