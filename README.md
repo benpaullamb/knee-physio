@@ -27,9 +27,13 @@ She no longer has to count the reps or watch a clock. All she has to do is focus
 
 ### Installation
 
+1. Install the dependencies.
+
 ```
 npm i
 ```
+
+2. Run the app locally with hot reloading.
 
 ```
 npm run dev
@@ -39,9 +43,15 @@ Go to http://localhost:3000
 
 ## Deployment
 
+This project is hosted on GitHub pages.
+
+1. Build the static pages.
+
 ```
 npm run generate
 ```
+
+2. Commit to the GitHub repo that has GitHub pages setup for the `/docs` directory.
 
 ```
 git push
