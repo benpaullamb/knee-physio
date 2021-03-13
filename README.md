@@ -2,7 +2,7 @@
 
 ![status: completed](https://img.shields.io/badge/status-completed-success)
 
-## About this project
+## About this Project
 
 ![Screenshot of the app](./screenshot.png)
 
@@ -19,7 +19,7 @@ She no longer has to count the reps or watch a clock. All she has to do is focus
 - Nuxt.js
 - NHS UK Frontend
 
-## Getting started
+## Getting Started
 
 ### Prerequisites
 
@@ -57,7 +57,7 @@ https://benpaullamb.github.io/knee-physio/
 
 No planned features
 
-## Release history
+## Release History
 
 - v0.2.1
   - exercise settings
