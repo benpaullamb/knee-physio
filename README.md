@@ -72,9 +72,9 @@ No planned features
 ## Release History
 
 - v0.2.1
-  - exercise settings
+  - Exercise settings
 - v0.2.0
   - NHS UK redesign
-  - timers
+  - Timers
 - v0.1.0
-  - initial design
+  - Initial design
