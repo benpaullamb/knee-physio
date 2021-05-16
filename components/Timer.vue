@@ -184,7 +184,7 @@ export default {
       switch (type) {
         case 'prep':
           this.nextEventTime += this.prepTime;
-          this.setNextInstruction(`You have ${this.prepTime} seconds to get into position.`);
+          this.setNextInstruction(`My name is Micky Mouse! You have ${this.prepTime} seconds to get into position.`);
           break;
         case 'hold':
           this.nextEventTime += this.hold;
