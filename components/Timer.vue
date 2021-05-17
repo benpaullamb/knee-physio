@@ -78,7 +78,7 @@ export default {
         'When you start the timer the next instruction will be displayed here as well as being spoken to you.',
       nextInstructionText: '',
       nextInstructionSpeech: '',
-      voicePitch: 1.5,
+      voicePitch: 1,
 
       time: 0,
       prepTime: 20,
@@ -184,7 +184,7 @@ export default {
       switch (type) {
         case 'prep':
           this.nextEventTime += this.prepTime;
-          this.setNextInstruction(`My name is Micky Mouse! You have ${this.prepTime} seconds to get into position.`);
+          this.setNextInstruction(`You have ${this.prepTime} seconds to get into position.`);
           break;
         case 'hold':
           this.nextEventTime += this.hold;
